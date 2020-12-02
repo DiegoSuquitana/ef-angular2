@@ -5,9 +5,14 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { BarraSuperiorComponent } from './barra-superior/barra-superior.component';
+import { LoginComponent } from './login/login.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BarraSuperiorComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
