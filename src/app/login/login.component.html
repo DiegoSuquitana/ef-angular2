@@ -1,36 +1,34 @@
-
-
-<form class="valign-wrapper">
-<div class="container center-block">
-  <div class="row">
-    <div class="col s12 m12 l12 N/A transparent">
-      <h5 class="center-align white-text">Login</h5>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col s12 m12 l12">
-      <div class="input-field col s12 m12 l12">
-        <i class="material-icons prefix">account_circle</i>
-        <input id="username" type="text" class="validate white-text">
-        <label for="username" class="white-text">Correo Electronico:</label>
-      </div>
-      <div class="input-field col s12 m12 l12">
-        <i class="material-icons prefix">vpn_key</i>
-        <input id="pass" type="password" class="validate white-text">
-        <label for="pass" class="white-text">Contraseña:</label>
-      </div>
-      
-    </div>
-  </div>
-  <div class="row center-align">
-    <div class="col s12 m12 l12">
+<form class="valign-wrapper" #f="ngForm">
+  <div class="container center-block">
+    <div class="row">
       <div class="col s12 m12 l12 N/A transparent">
-        <button class="btn waves-effect waves-light grey darken-4" type="submit" name="action">Submit
-          <i class="material-icons right">send</i>
-        </button>
+        <h5 class="center-align white-text">Login</h5>
       </div>
     </div>
-  </div>
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div class="input-field col s12 m12 l12">
+          <i class="material-icons prefix">account_circle</i>
+          <input #user id="username" type="text" class="validate white-text" ngModel name='email' required 
+            pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
+          <label for="username" class="white-text">Correo Electronico:</label>
+        </div>
+        <div class="input-field col s12 m12 l12">
+          <i class="material-icons prefix">vpn_key</i>
+          <input #password id="pass" type="password" class="validate white-text" ngModel name='password' required>
+          <label for="pass" class="white-text">Contraseña:</label>
+        </div>
+
+      </div>
+    </div>
+    <div class="row center-align">
+      <div class="col s12 m12 l12">
+        <div class="col s12 m12 l12 N/A transparent">
+          <button class="btn waves-effect waves-light grey darken-4" (click)="iniciarSesion(user.value, password.value)" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </form>
-  
