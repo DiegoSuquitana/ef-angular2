@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 
 import { BarraSuperiorComponent } from './barra-superior/barra-superior.component';
 import { LoginComponent } from './login/login.component';
+import { HttpService } from './http.service';
+import { LogService } from './log.service';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,7 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [LogService,HttpService,DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
