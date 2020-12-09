@@ -1,3 +1,16 @@
+.c-login{
+  background-image: url("../../assets/login-fondo.jpg");
+  min-height: 100%;
+
+  width: 100%;
+  height: auto;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 .valign-wrapper {
     height: 100vh;
   }
+
