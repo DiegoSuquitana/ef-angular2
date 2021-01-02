@@ -26,7 +26,7 @@ export class LoginComponent {//implements OnInit {
       for(let key in data){
         
         if(data[key].email == usr && data[key].pass == psw){
-          alert('datos correctos')
+          //alert('datos correctos')
           this.validacion = false;
           this.router.navigate(['/vista-principal']);
         } 
