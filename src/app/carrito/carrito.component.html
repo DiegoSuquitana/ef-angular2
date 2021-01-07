@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="container">
+    <t-barra-superior></t-barra-superior>
+  </div>
+
+</div>
+
+<br>
+
+<div class="container">  
+
+  <nav class="nav-extended grey lighten-5">
+    <div class="row center container">
+    <div class="col s6">
+      <div class="row" *ngFor="let carro of car">
+        <div class="card">
+          <div class="col-sm-6">
+                <img class="card-img-top shadow" [src]="'../../assets/'+ carro.imagen" width="20%">hol
+          </div>
+              <div class="col-sm-6">
+                <h6 class="grey-text"><b>{{carro.nombre}}</b></h6>
+                <h6 class="grey-text"><b>Unidades: </b>{{carro.stock}}</h6>
+                <h6 class="grey-text"><b>Subtotal: </b>${{carro.subtotal}}.00</h6>
+              </div>
+      </div>
+    </div>
+  </div>
+    <div class="col s6">
+      <br>
+      <h4 class="grey-text"> <b>Total: </b>${{carro.total}}.00</h4>
+      <br>
+      <div class="row">
+        <div class="col-sm-3">
+            <button class="btn btn-danger btn-lg" (click)="cancelar()">Volver</button>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-success btn-lg" (click)="pagar()">Pagar</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</nav>
+
+</div>
