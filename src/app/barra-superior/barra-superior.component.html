@@ -4,17 +4,33 @@
     <a href="#" data-target="mobile-demo" class="sidenav-trigger grey-text"><i class="material-icons">menu</i></a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a href="">
-        <i class="material-icons prefix grey-text">apps</i>
-      </a></li>
+          <i class="material-icons prefix grey-text">apps</i>
+        </a></li>
+<!--
+        <li><a [routerLink]="['carrito']"><img src="/assets/ic_shopping_cart_black_24px.svg" /></a>
+          <span *ngIf="carShoping.length != 0"  class="numProd">{{carShoping.length}}</span></li>
+-->
+        <li class="nav-wrapper">
+          
+          <span *ngIf="this.carro.carrito.length != 0" class="new badge">{{this.carro.carrito.length}}</span>
+          <i routerLink="/carrito" class="material-icons prefix grey-text">add_shopping_cart</i>
+        </li>
+<!--
+      <li class="nav-wrapper" id="contorno">
+
+        <a id="ex4">
+          <span class="p1 fa-stack fa-5x has-badge" data-count={{carro.carrito.length}}></span>
+          <i class="material-icons prefix grey-text" data-count={{carro.carrito.length}}
+            routerLink="/carrito">add_shopping_cart</i>
+        </a>
+      </li>
+-->
       <li><a href="">
-        <i class="material-icons prefix grey-text">add_shopping_cart</i>
-      </a></li>
+          <i class="material-icons prefix grey-text">inbox</i>
+        </a></li>
       <li><a href="">
-        <i class="material-icons prefix grey-text">inbox</i>
-      </a></li>
-      <li><a href="">
-        <i class="material-icons prefix grey-text">login</i>
-      </a></li>
+          <i class="material-icons prefix grey-text">login</i>
+        </a></li>
     </ul>
   </div>
 </nav>
