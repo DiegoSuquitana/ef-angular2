@@ -27,7 +27,7 @@
               
                 <button class="waves-effect waves-light btn" (click)="vermas(producto.nombre)">Ver Más</button>
                 <button class="waves-effect waves-light btn" (click)="agregar(producto.imagen,producto.nombre,producto.precio, uni.value)">Añadir</button>
-                <input class="input-field col s6 grey-text" style="width:40px" type="number" value="1" min="1" [max]="producto.unidades" #uni>
+                <input class="input-field grey-text" style="width:40px" type="number" value="1" min="1" [max]="producto.stock" #uni>
               
               </div>
         </div>
