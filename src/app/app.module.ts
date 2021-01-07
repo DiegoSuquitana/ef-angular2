@@ -12,15 +12,19 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { BarraSuperiorComponent } from './barra-superior/barra-superior.component';
 import { VistaPrincipalComponent } from './vista-principal/vista-principal.component';
-
-
+import { VerMasComponent } from './ver-mas/ver-mas.component';
+import { VermasService } from './vermas.service';
+import { CarritoService } from './carrito.service';
+import { CarritoComponent } from './carrito/carrito.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BarraSuperiorComponent,
     LoginComponent,
-    VistaPrincipalComponent
+    VistaPrincipalComponent,
+    VerMasComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,7 @@ import { VistaPrincipalComponent } from './vista-principal/vista-principal.compo
     HttpModule,
     AppRoutingModule
   ],
-  providers: [LogService,HttpService,DataService],
+  providers: [LogService,HttpService,DataService,VermasService,CarritoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
