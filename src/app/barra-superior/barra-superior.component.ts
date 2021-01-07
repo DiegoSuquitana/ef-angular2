@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CarritoService} from'../carrito.service';
 
 @Component({
   selector: 't-barra-superior',
@@ -7,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BarraSuperiorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private carro: CarritoService) { }
 
+  invisible(){
+    this.carro.estado = 1;
+  }
+
+  visible(){
+    this.carro.estado = 0;
+  }
+  
   ngOnInit() {
   }
 
