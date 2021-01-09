@@ -15,4 +15,7 @@ subproducto: any[] = [];
     .pipe(map((response: Response) => response.json()))
   }
 
+  actualizarProductos() {
+    return this.http.put(`https://tienda-online-efnextu.firebaseio.com/${0}.json`, {})
+
 }
