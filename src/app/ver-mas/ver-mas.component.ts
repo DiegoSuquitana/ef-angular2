@@ -8,6 +8,7 @@ import {VermasService} from '../vermas.service';
   styleUrls: ['./ver-mas.component.css']
 })
 export class VerMasComponent implements OnInit {
+  ide = this.verMas.id;
   imagen = this.verMas.imagen;
   nombre = this.verMas.nombre;
   precio = this.verMas.precio;
