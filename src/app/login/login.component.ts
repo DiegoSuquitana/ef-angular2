@@ -20,7 +20,7 @@ export class LoginComponent {//implements OnInit {
   iniciarSesion(usr:string, psw:string){
     if(usr != '' && psw != '')
     {
-      this.httpService.getDatos().subscribe((data:Response) =>{
+      this.httpService.getDatosUser().subscribe((data:Response) =>{
       this.validacion = true;
       
       for(let key in data){
