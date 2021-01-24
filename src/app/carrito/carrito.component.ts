@@ -38,10 +38,11 @@ export class CarritoComponent implements OnInit {
     this.router.navigate(['/vista-principal']);
     this.carro.estado = 0;
     this.carro.total=0;
-    console.log(nombre[0].stock);
+    console.log(nombre[0].nombre);
     console.log(nombre);
     
     this.httpService.actualizarProductos(nombre);
+    //this.httpService.updateFood(nombre);
   }
 
   ngOnInit() {
