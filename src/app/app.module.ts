@@ -17,6 +17,9 @@ import { VermasService } from './vermas.service';
 import { CarritoService } from './carrito.service';
 import { CarritoComponent } from './carrito/carrito.component';
 
+//import { AngularFireModule } from '@angular/fire';
+//import { environment } from 'environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +34,7 @@ import { CarritoComponent } from './carrito/carrito.component';
     FormsModule,
     HttpModule,
     AppRoutingModule
+    //AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [LogService,HttpService,DataService,VermasService,CarritoService],
   bootstrap: [AppComponent]
