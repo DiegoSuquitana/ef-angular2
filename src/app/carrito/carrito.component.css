@@ -1,0 +1,10 @@
+.productos {
+	width: 95%;
+	padding: 5px;
+	margin: 0 auto;
+	height: 500px;
+  overflow-y: scroll;
+  flex-wrap:wrap;
+  display: flex;
+  justify-content: space-between;
+}
