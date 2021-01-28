@@ -23,87 +23,10 @@ subproducto: any[] = [];
   }
 
   actualizarProductos(nombre){
-      console.log("subproductp");
-      console.log(this.subproducto);
-      
-
-      //this.http.patch(`https://tienda-online-efnextu.firebaseio.com/producto1.json`,JSON.stringify(this.subproducto)).subscribe(()=>{
       this.http.put('https://tienda-online-efnextu.firebaseio.com/producto/.json', JSON.stringify(this.subproducto)).subscribe(()=>{
-
-      
-      alert ("actualizado");
-
+      alert ("Compra Realizada");
       })
     
   }
-
-/*
-  actualizarProductos(data: any){
-    const datos = JSON.stringify(data);
-    return this.http.put('https://tienda-online-efnextu.firebaseio.com/.json', datos).map((response:Response)=> response.json());
-
-  }
-*/
-/*
-  actualizarProductos(nombre) {
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-
-    console.log(nombre);
-    //return this.http.put('https://tienda-online-efnextu.firebaseio.com/producto1.json', nombre);
-    return this.http.put('https://tienda-online-efnextu.firebaseio.com/producto1.json', JSON.stringify({
-      imagen:"./carpeta/imagen.jpg",
-      nombre:"usuario1",
-      precio:50,
-      stock:40,
-      tipo:"producto"
-    }),{headers: headers}).map(res => res.json());
-
-  }*/
-
-
-  /*
-  actualizarProductos(nombre) {
-
-    console.log(nombre[0].nombre);
-    //return this.http.put('https://tienda-online-efnextu.firebaseio.com/producto1.json', nombre);
-    return this.http.put('https://tienda-online-efnextu.firebaseio.com/producto1.json', JSON.stringify({
-      id:3,
-      imagen: "./carpeta/imagen.jpg",
-      nombre: "usuario1",
-      precio: 50,
-      stock: 40,
-      tipo: "producto"
-    }), {
-      headers: new Headers({'Content-Type': 'application/json'})
-    }).map(res => res.json());
-
-  }
-
-*/
-
-/*
-    updateFood(nombre) {
-      let headers = new Headers({ 'Content-Type': 'application/json' });
-      let options = new RequestOptions({ headers: headers });
-      //let body = JSON.stringify(nombre);
-      let body = JSON.stringify({
-        id:3,
-        imagen: "./carpeta/imagen.jpg",
-        nombre: "usuario1",
-        precio: 50,
-        stock: 40,
-        tipo: "producto"
-      });
-      console.log(nombre);
-      return this.http.put('https://tienda-online-efnextu.firebaseio.com/producto1', body, options ).map((res: Response) => res.json());
-    }
-*/
-
-/*
-    return this.http.put('https://tienda-online-efnextu.firebaseio.com/producto1.json', JSON.stringify(nombre), {
-      headers: new Headers({'Content-Type': 'application/json'})
-    }).map(res => res.json());
-*/
 
 }
