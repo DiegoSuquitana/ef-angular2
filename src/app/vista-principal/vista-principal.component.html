@@ -1,37 +1,118 @@
+<div class="fondo">
+  <div class="row">
+    <div class="container">
+      <t-barra-superior></t-barra-superior>
+    </div>
+  </div>
+
+<div class="row">
+  <br> <br>
+</div>
+
 <div class="container">
-  <t-barra-superior></t-barra-superior>
-
-  <br>
-
-  <nav class="nav-extended grey lighten-5">
-    <div class="nav-wrapper col-9">
-      <a href="#" class="brand-logo grey-text">Catalogo de productos</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down col-3 justify-content-center">
-        <li>
-          <h6 class="grey-text icon_prefix">¿Que estas buscando?</h6> 
-          <input placeholder="Buscar producto.." id="icon_prefix" type="text" class="grey-text" (keyup)="buscador(texto.value)" #texto>
-        </li>
-      </ul>
-    </div><br/>
-
-    <div class="center-align">
-      <div class="productos">
-        <div *ngFor="let producto of subproducto" class="col-3 shadow-sm colspan" style="width: 30%">
-          <br>
-          <div class="card hoverable">
-            <img class="card-image"[src]="'../../assets/' + producto.imagen" style="width: 20%" >
-            
-              <h5 class="card-title grey-text">{{producto.nombre}}</h5>
-              <h6 class="grey-text"><b>Precio:</b> ${{producto.precio}}</h6>
-              <h6 class="grey-text"><b>Unidades Disponibles:</b> {{producto.stock}}</h6>
-              
-                <button class="waves-effect waves-light btn" (click)="vermas(producto.nombre)">Ver Más</button>
-                <button class="waves-effect waves-light btn" (click)="agregar(producto.imagen,producto.nombre,producto.precio, uni.value)">Añadir</button>
-                <input class="input-field grey-text" style="width:40px" type="number" value="1" min="1" [max]="producto.stock" #uni>
-              
+  <div class="row block white" >
+    <!--<div class="nav-wrapper">-->
+      <table>
+        <tr>
+          <td><a href="#" class="brand-logo grey-text"><h4>Catalogo de productos</h4></a></td>
+          <td style="width: 25%;">
+            <ul id="nav-mobile" class="right hide-on-med-and-down justify-content-center">
+              <li>
+                <h6 class="grey-text icon_prefix">¿Que estas buscando?</h6> 
+                <input placeholder="Buscar producto.." id="icon_prefix" type="text" class="grey-text" (keyup)="buscador(texto.value)" #texto>
+              </li>
+            </ul>
+          </td>        
+        </tr>
+        <tr>
+          <td class="" colspan="2">
+            <div class="productos section scrollspy">
+              <div *ngFor="let producto of subproducto" class="col-3 shadow-sm colspan" style="width: 30%" >
+                <br>
+                <div class="card hoverable">
+                  <img class="card-image"[src]="'../../assets/' + producto.imagen" style="width: 20%" >
+                  
+                    <h5 class="card-title grey-text">{{producto.nombre}}</h5>
+                    <h6 class="grey-text"><b>Precio:</b> ${{producto.precio}}</h6>
+                    <h6 class="grey-text"><b>Unidades Disponibles:</b> {{producto.stock}}</h6>
+                    
+                      <button class="waves-effect waves-light btn" (click)="vermas(producto.nombre)">Ver Más</button>
+                      <button class="waves-effect waves-light btn" (click)="agregar(producto.imagen,producto.nombre,producto.precio, uni.value)">Añadir</button>
+                      <input class="input-field grey-text" style="width:40px" type="number" value="1" min="1" [max]="producto.stock" #uni>
+                    
+                </div>
               </div>
+            </div>
+          </td>
+        </tr>
+      </table>      
+    <!--</div>-->
+  </div>
+</div>
+<!--
+<div class="container">
+  <div class="row block white col l12">
+    <div class="productos">
+      <div *ngFor="let producto of subproducto" class="col-3 shadow-sm colspan" style="width: 30%" >
+        <br>
+        <div class="card hoverable">
+          <img class="card-image"[src]="'../../assets/' + producto.imagen" style="width: 20%" >
+          
+            <h5 class="card-title grey-text">{{producto.nombre}}</h5>
+            <h6 class="grey-text"><b>Precio:</b> ${{producto.precio}}</h6>
+            <h6 class="grey-text"><b>Unidades Disponibles:</b> {{producto.stock}}</h6>
+            
+              <button class="waves-effect waves-light btn" (click)="vermas(producto.nombre)">Ver Más</button>
+              <button class="waves-effect waves-light btn" (click)="agregar(producto.imagen,producto.nombre,producto.precio, uni.value)">Añadir</button>
+              <input class="input-field grey-text" style="width:40px" type="number" value="1" min="1" [max]="producto.stock" #uni>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="container nav-extended grey lighten-5">
+    <nav class="nav-extended grey lighten-5">
+      <div class="row">
+        <div class="container" style="position: fixed;">
+        <div class="nav-wrapper col-9">
+          <a href="#" class="brand-logo grey-text">Catalogo de productos</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down col-3 justify-content-center">
+            <li>
+              <h6 class="grey-text icon_prefix">¿Que estas buscando?</h6> 
+              <input placeholder="Buscar producto.." id="icon_prefix" type="text" class="grey-text" (keyup)="buscador(texto.value)" #texto>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </nav>
+      <br>
+      <nav class="nav-extended grey lighten-5">
+      <div class="row center-align">
+        <div class="productos">
+          <div *ngFor="let producto of subproducto" class="col-3 shadow-sm colspan" style="width: 30%" >
+            <br>
+            <div class="card hoverable">
+              <img class="card-image"[src]="'../../assets/' + producto.imagen" style="width: 20%" >
+              
+                <h5 class="card-title grey-text">{{producto.nombre}}</h5>
+                <h6 class="grey-text"><b>Precio:</b> ${{producto.precio}}</h6>
+                <h6 class="grey-text"><b>Unidades Disponibles:</b> {{producto.stock}}</h6>
+                
+                  <button class="waves-effect waves-light btn" (click)="vermas(producto.nombre)">Ver Más</button>
+                  <button class="waves-effect waves-light btn" (click)="agregar(producto.imagen,producto.nombre,producto.precio, uni.value)">Añadir</button>
+                  <input class="input-field grey-text" style="width:40px" type="number" value="1" min="1" [max]="producto.stock" #uni>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+-->
+
 </div>
