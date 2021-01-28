@@ -1,24 +1,30 @@
-<nav class="nav-extended grey lighten-5">
-  <div class="nav-wrapper">
-    <a href="/vista-principal" class="brand-logo grey-text">La Bodega</a>
-    <a href="" data-target="mobile-demo" class="sidenav-trigger grey-text"><i class="material-icons">menu</i></a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="">
-          <i class="material-icons prefix grey-text">apps</i>
-        </a></li>
+<div class="row">
+  <div class="container center" style="position: fixed;">
 
-        <li class="nav-wrapper">
-          
-          <span *ngIf="this.carro.carrito.length != 0" class="new badge">{{this.carro.carrito.length}}</span>
-          <i routerLink="/carrito" class="material-icons prefix grey-text">add_shopping_cart</i>
-        </li>
+    <nav class="nav-extended grey lighten-5">
+      <div class="nav-wrapper">
+        <a href="/vista-principal" class="brand-logo grey-text">La Bodega</a>
+        <a href="" data-target="mobile-demo" class="sidenav-trigger grey-text"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="">
+              <i class="material-icons prefix grey-text">apps</i>
+            </a></li>
 
-      <li><a href="">
-          <i class="material-icons prefix grey-text">inbox</i>
-        </a></li>
-      <li><a href="">
-          <i class="material-icons prefix grey-text">login</i>
-        </a></li>
-    </ul>
+            <li class="nav-wrapper">
+              
+              <span *ngIf="this.carro.carrito.length != 0" class="new badge">{{this.carro.carrito.length}}</span>
+              <i routerLink="/carrito" class="material-icons prefix grey-text">add_shopping_cart</i>
+            </li>
+
+          <li><a href="">
+              <i class="material-icons prefix grey-text">inbox</i>
+            </a></li>
+          <li><a href="">
+              <i class="material-icons prefix grey-text">login</i>
+            </a></li>
+        </ul>
+      </div>
+    </nav>
+
   </div>
-</nav>
+</div>
